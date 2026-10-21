@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pandit Studio & Films | Best Wedding & Cinematic Photography in Giridih</title>
+  <meta name="description" content="Giridih's premier wedding photography & cinematic films studio. Pre-wedding, candid moments, 4K cinematic teasers, and luxury albums. Book your wedding date: +91 98013 13704.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #07090e;
+      --card-bg: rgba(18, 22, 34, 0.75);
+      --gold: #d4af37;
+      --gold-light: #f3e5ab;
+      --gold-gradient: linear-gradient(135deg, #d4af37 0%, #fef08a 50%, #b45309 100%);
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --border: rgba(212, 175, 55, 0.2);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+    h1, h2, h3, .font-serif { font-family: 'Cinzel', serif; }
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      width: 90%;
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: rgba(7, 9, 14, 0.85);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-logo {
+      font-size: 24px;
+      color: var(--gold);
+    }
+    .brand-text h1 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .brand-text p {
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      color: #cbd5e1;
+      text-transform: uppercase;
+    }
+    .btn-book-wa {
+      background: #25d366;
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 10px 22px;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+      transition: all 0.3s;
+    }
+    .btn-book-wa:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      padding: 100px 0 90px;
+      text-align: center;
+      background: radial-gradient(circle at 50% 20%, rgba(212, 175, 55, 0.12) 0%, rgba(7, 9, 14, 0.95) 70%),
+                  url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    }
+    .hero-badge {
+      display: inline-block;
+      border: 1px solid var(--gold);
+      background: rgba(212, 175, 55, 0.1);
+      color: var(--gold-light);
+      padding: 8px 22px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+    .hero h2 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      background: linear-gradient(180deg, #ffffff 0%, #e2e8f0 70%, #94a3b8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      max-width: 950px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero h2 span {
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 720px;
+      margin: 0 auto 35px;
+      line-height: 1.7;
+    }
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+    }
+    .btn-gold {
+      background: var(--gold-gradient);
+      color: #07090e;
+      font-weight: 800;
+      font-size: 0.95rem;
+      padding: 14px 32px;
+      border-radius: 50px;
+      box-shadow: 0 10px 30px rgba(212, 175, 55, 0.35);
+      transition: all 0.3s;
+    }
+    .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 15px 40px rgba(212, 175, 55, 0.5); }
+    .btn-outline {
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 14px 30px;
+      border-radius: 50px;
+      transition: all 0.3s;
+    }
+    .btn-outline:hover { background: rgba(255, 255, 255, 0.1); }
+
+    /* Stats Banner */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 1050px;
+      margin: 0 auto;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    }
+    .stat-item h3 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+    .stat-item p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    /* Gallery Grid */
+    .section {
+      padding: 90px 0;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .section-badge {
+      font-size: 0.8rem;
+      letter-spacing: 2.5px;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+    .section-header h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .gallery-card {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      height: 380px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+    .gallery-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .gallery-card:hover img {
+      transform: scale(1.08);
+    }
+    .gallery-overlay {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 30px 20px 20px;
+      background: linear-gradient(to top, rgba(7, 9, 14, 0.95) 0%, rgba(7, 9, 14, 0) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .gallery-overlay span {
+      font-size: 0.75rem;
+      color: var(--gold);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .gallery-overlay h3 {
+      font-size: 1.25rem;
+      color: #ffffff;
+    }
+
+    /* Packages / Pricing */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .pricing-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 40px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      transition: all 0.3s;
+    }
+    .pricing-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--gold);
+      box-shadow: 0 20px 45px rgba(212, 175, 55, 0.15);
+    }
+    .pricing-card.featured {
+      border: 2px solid var(--gold);
+      background: rgba(26, 21, 35, 0.85);
+      box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
+    }
+    .popular-tag {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold-gradient);
+      color: #000;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 4px 18px;
+      border-radius: 50px;
+    }
+    .pricing-card h3 {
+      font-size: 1.5rem;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .pricing-card p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 25px;
+    }
+    .package-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 35px;
+    }
+    .package-features li {
+      font-size: 0.92rem;
+      color: #e2e8f0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .package-features li span {
+      color: var(--gold);
+      font-weight: bold;
+    }
+
+    /* Booking CTA Banner */
+    .cta-banner {
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(7, 9, 14, 0.95) 100%);
+      border: 1px solid var(--gold);
+      border-radius: 24px;
+      padding: 60px 40px;
+      text-align: center;
+      max-width: 950px;
+      margin: 60px auto 0;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    }
+    .cta-banner h2 {
+      font-size: 2.4rem;
+      color: #fff;
+      margin-bottom: 15px;
+    }
+    .cta-banner p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 40px 0;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    footer strong { color: var(--gold); }
+
+    /* Floating WhatsApp */
+    .float-wa {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #25d366;
+      color: white;
+      padding: 14px 24px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+      z-index: 1000;
+      transition: all 0.2s;
+    }
+    .float-wa:hover {
+      transform: scale(1.05);
+      color: white;
+    }
+
+    @media (max-width: 900px) {
+      .hero h2 { font-size: 2.3rem; }
+      .gallery-grid, .pricing-grid, .stats-grid { grid-template-columns: 1fr; }
+      .gallery-card { height: 300px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <div class="brand">
+        <span class="brand-logo">📸</span>
+        <div class="brand-text">
+          <h1>PANDIT STUDIO & FILMS</h1>
+          <p>CINEMATIC WEDDING FILMS • GIRIDIH</p>
+        </div>
+      </div>
+      <a href="https://wa.me/919801313704?text=Hello%20Pandit%20Studio,%20I%20want%20to%20check%20wedding%20dates%20and%20packages" class="btn-book-wa" target="_blank">
+        💬 Book Wedding Date on WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">Giridih's Premier Wedding Photography Studio</div>
+      <h2>Preserving Your <span>Sacred Wedding Memories</span> With Cinematic Grandeur</h2>
+      <p>Specializing in modern royal Indian weddings, 4K cinematic teaser films, drone aerial coverage, candid emotional portraiture, and luxury handcrafted photobooks.</p>
+      
+      <div class="hero-actions">
+        <a href="https://wa.me/919801313704?text=Hello%20Pandit%20Studio,%20I%20am%20enquiring%20about%20wedding%20photography%20packages" class="btn-gold" target="_blank">
+          📅 Check Wedding Date Availability →
+        </a>
+        <a href="tel:+919801313704" class="btn-outline">
+          📞 Direct Call: 098013 13704
+        </a>
+      </div>
+
+      <!-- Stats Banner -->
+      <div class="stats-grid">
+        <div class="stat-item">
+          <h3>450+</h3>
+          <p>Weddings Captured</p>
+        </div>
+        <div class="stat-item">
+          <h3>4K Ultra HD</h3>
+          <p>Cinematic Quality</p>
+        </div>
+        <div class="stat-item">
+          <h3>100%</h3>
+          <p>5-Star Reviews</p>
+        </div>
+        <div class="stat-item">
+          <h3>12+ Yrs</h3>
+          <p>Studio Excellence</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Work / Gallery -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Masterpieces in Motion</span>
+        <h2>Featured Wedding Portfolios</h2>
+        <p>Every glance, tear, and joyful laugh captured in timeless, cinematic detail.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- Photo 1 -->
+        <div class="gallery-card">
+          <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=800&q=80" alt="Royal Indian Bride">
+          <div class="gallery-overlay">
+            <span>Candid Portraits</span>
+            <h3>Royal Bridal Moments</h3>
+          </div>
+        </div>
+
+        <!-- Photo 2 -->
+        <div class="gallery-card">
+          <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80" alt="Varmala Ceremony">
+          <div class="gallery-overlay">
+            <span>Rituals & Traditions</span>
+            <h3>Sacred Varmala Rituals</h3>
+          </div>
+        </div>
+
+        <!-- Photo 3 -->
+        <div class="gallery-card">
+          <img src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?auto=format&fit=crop&w=800&q=80" alt="Pre-Wedding Couple">
+          <div class="gallery-overlay">
+            <span>Cinematic Film</span>
+            <h3>Romantic Pre-Wedding Shoots</h3>
+          </div>
+        </div>
+
+        <!-- Photo 4 -->
+        <div class="gallery-card">
+          <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=800&q=80" alt="Haldi Ceremony">
+          <div class="gallery-overlay">
+            <span>Celebrations</span>
+            <h3>Haldi & Mehndi Festivities</h3>
+          </div>
+        </div>
+
+        <!-- Photo 5 -->
+        <div class="gallery-card">
+          <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80" alt="Couple Portraits">
+          <div class="gallery-overlay">
+            <span>Couple Shoot</span>
+            <h3>Candid Golden Hour Romance</h3>
+          </div>
+        </div>
+
+        <!-- Photo 6 -->
+        <div class="gallery-card">
+          <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=80" alt="Baraat & Reception">
+          <div class="gallery-overlay">
+            <span>Grand Finale</span>
+            <h3>Baraat & Reception Night</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Packages Section -->
+  <section class="section" style="background: rgba(18, 22, 34, 0.4); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Transparent Pricing</span>
+        <h2>Wedding Coverage Packages</h2>
+        <p>Customized packages tailored to traditional weddings, pre-wedding shoots, and grand receptions.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Silver -->
+        <div class="pricing-card">
+          <div>
+            <h3>Silver Classic</h3>
+            <p>Ideal for intimate ceremonies & 1-day events</p>
+            <ul class="package-features">
+              <li><span>✔</span> 1 Traditional Senior Photographer</li>
+              <li><span>✔</span> 1 HD Video Cinematographer</li>
+              <li><span>✔</span> Full Event Highlights & Raw Footage</li>
+              <li><span>✔</span> 1 Premium Photobook Album (30 Pages)</li>
+              <li><span>✔</span> Delivered on High-Speed USB Pen Drive</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/919801313704?text=Hi%20Pandit%20Studio,%20I%20am%20interested%20in%20the%20Silver%20Classic%20Package" class="btn-outline" style="text-align: center;" target="_blank">
+            Enquire Silver Package →
+          </a>
+        </div>
+
+        <!-- Gold (Featured) -->
+        <div class="pricing-card featured">
+          <div class="popular-tag">MOST POPULAR</div>
+          <div>
+            <h3>Gold Cinematic</h3>
+            <p>Our bestselling full wedding coverage experience</p>
+            <ul class="package-features">
+              <li><span>✔</span> 2 Candid & Traditional Photographers</li>
+              <li><span>✔</span> 4K Ultra-HD Cinematic Video & Teaser Reel</li>
+              <li><span>✔</span> 4K Drone Aerial Venue & Baraat Coverage</li>
+              <li><span>✔</span> 1 Luxury Leatherette Album (40 Pages)</li>
+              <li><span>✔</span> Complete Cloud Album for Family Sharing</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/919801313704?text=Hi%20Pandit%20Studio,%20I%20am%20interested%20in%20the%20Gold%20Cinematic%20Package" class="btn-gold" style="text-align: center;" target="_blank">
+            Enquire Gold Package →
+          </a>
+        </div>
+
+        <!-- Platinum -->
+        <div class="pricing-card">
+          <div>
+            <h3>Platinum Royal</h3>
+            <p>The ultimate multi-day luxury wedding production</p>
+            <ul class="package-features">
+              <li><span>✔</span> Romantic Outdoor Pre-Wedding Video Shoot</li>
+              <li><span>✔</span> 3-Day Complete Coverage (Haldi, Sangeet, Wedding)</li>
+              <li><span>✔</span> Multi-Camera 4K Cinematic Film + Live Drone Feed</li>
+              <li><span>✔</span> 2 Luxury Velvet Crystal Albums</li>
+              <li><span>✔</span> Same-Day Instagram 60s Reel Delivery</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/919801313704?text=Hi%20Pandit%20Studio,%20I%20am%20interested%20in%20the%20Platinum%20Royal%20Package" class="btn-outline" style="text-align: center;" target="_blank">
+            Enquire Platinum Package →
+          </a>
+        </div>
+      </div>
+
+      <!-- Bottom Booking Banner -->
+      <div class="cta-banner">
+        <h2>Dates Fill Up Fast For Upcoming Wedding Season!</h2>
+        <p>Book early to secure our senior cinematographers and drone crew for your auspicious wedding date in Giridih.</p>
+        <a href="https://wa.me/919801313704?text=Hello%20Pandit%20Studio,%20I%20want%20to%20reserve%20my%20wedding%20date" class="btn-gold" style="display: inline-block; padding: 16px 36px; font-size: 1rem;" target="_blank">
+          💬 Check Your Wedding Date on WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2026 <strong>Pandit Studio & Films</strong>. Gandey / Giridih, Jharkhand.</p>
+      <p style="font-size: 0.8rem; margin-top: 6px;">Traditional Photography • 4K Cinematic Films • Drone Shoots • Pre-Wedding</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/919801313704?text=Hello%20Pandit%20Studio,%20I%20am%20looking%20for%20wedding%20photography%20details" class="float-wa" target="_blank">
+    💬 Book Wedding Date
+  </a>
+
+</body>
+</html>
